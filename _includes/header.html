@@ -1,0 +1,25 @@
+<header class="site-header">
+  <div class="content">
+
+    <h1>
+      <a class="site-title" href="/">{{ site.title }}</a>
+    </h1>
+    <h2 class="site-tagline">{{ site.tagline }}</h2>
+
+    <nav class="site-nav">
+      <a {% if page.url == "/" %} class="active" {% endif %} href="/">Home</a>
+
+      {% assign url = page.url | remove: 'index.html' %}
+      {% assign sorted_pages = site.pages | sort:"order" %}
+
+      {% for page in sorted_pages %}
+        {% unless page.exclude %}
+          {% if page.title %}
+            <a class="page-link {% if page.url == url %} active {% endif %}" href="{{ page.url }}">{{ page.title }}</a>
+          {% endif %}
+        {% endunless %}
+      {% endfor %}
+    </nav>
+
+  </div> <!-- .content -->
+</header>

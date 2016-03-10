@@ -1,0 +1,45 @@
+# Dependencies
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Permalinks
+permalink: /:title/
+
+# Site settings
+title: animateWithDuration
+tagline: Stunning web and app animations for your infinite viewing pleasure
+description: Stunning web and app animations for your infinite viewing pleasure
+email: ross@rossbeale.com
+
+author:
+  name: Ross Beale
+  url: http://rossbeale.com
+
+# Pagination
+paginate: 5
+paginate_path: "page/:num"
+
+# Config
+include: ["_pages"]
+gems: ["jekyll-paginate"]
+exclude: [Gemfile, Gemfile.lock, Guardfile, README.md, s3_website.yml]
+
+# Environment
+timezone: Europe/London
+production: false
+
+# Utils
+url: http://localhost:4000
+twitter_username: rossbeale
+
+# Front Matter Defaults
+defaults:
+  -
+    scope:
+      path: ""      # empty string for all files
+      type: posts   # limit to posts
+    values:
+      is_post: true # is_post=true for all posts

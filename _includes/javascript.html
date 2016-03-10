@@ -1,0 +1,16 @@
+<script type="text/javascript">
+  var image_tags = document.getElementsByTagName('img');
+  for (var i = 0; i < image_tags.length; i++) {
+    var img_tag = image_tags[i];
+    if (/.*\.gif/.test(img_tag.src)) {
+      var rub = new RubbableGif({
+        gif: img_tag,
+        auto_play: true,
+        rubbable: true,
+        progressbar_height: 5,
+        progressbar_foreground_color: "#888888"
+      });
+      rub.load();
+    }
+  }
+</script>
