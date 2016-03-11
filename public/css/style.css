@@ -227,7 +227,7 @@ code {
 /* Archive Page */
 .post-list ul {
   list-style-type: none;
-  margin: 0;
+  margin: 1em 0 0 0;
   padding: 0;
 }
 
